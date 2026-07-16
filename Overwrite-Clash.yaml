@@ -68,13 +68,13 @@ anchor:
   SelectMH: &SelectMH
     type: select
     proxies:
-      - 高速优选 | 大带宽
+      - 手动选择
       - 香港节点
       - 美国节点
       - 新加坡节点
       - 日本节点
       - 台湾节点
-      - 手动选择
+      - 高速优选 | 大带宽
       - 自动选择
       - 全球直连
     use:
