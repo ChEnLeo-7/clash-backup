@@ -59,6 +59,7 @@ anchor:
   SelectMS: &SelectMS
     type: select
     proxies:
+      - 高速优选 | 大带宽
       - 香港节点
       - 美国节点
       - 日本节点
@@ -72,6 +73,7 @@ anchor:
   SelectMH: &SelectMH
     type: select
     proxies:
+      - 高速优选 | 大带宽
       - 香港节点
       - 美国节点
       - 新加坡节点
@@ -86,6 +88,7 @@ anchor:
   SelectHK: &SelectHK
     type: select
     proxies:
+      - 高速优选 | 大带宽
       - 香港节点
       - 美国节点
       - 新加坡节点
@@ -98,6 +101,7 @@ anchor:
   SelectUS: &SelectUS
     type: select
     proxies:
+      - 高速优选 | 大带宽
       - 美国节点
       - 香港节点
       - 新加坡节点
@@ -110,6 +114,7 @@ anchor:
   SelectSG: &SelectSG
     type: select
     proxies:
+      - 高速优选 | 大带宽
       - 新加坡节点
       - 香港节点
       - 美国节点
@@ -122,6 +127,7 @@ anchor:
   SelectJP: &SelectJP
     type: select
     proxies:
+      - 高速优选 | 大带宽
       - 日本节点
       - 香港节点
       - 美国节点
@@ -134,6 +140,7 @@ anchor:
   SelectTW: &SelectTW
     type: select
     proxies:
+      - 高速优选 | 大带宽
       - 台湾节点
       - 香港节点
       - 美国节点
@@ -279,6 +286,15 @@ proxy-groups:
   - name: 测速工具
     <<: *SelectHK
     icon: "https://raw.githubusercontent.com/Giveupmoon/Clash_Rules_Yaml/main/Icon/HOMOMIX/Color/Large/SpeedTest.png"
+
+  - name: 高速优选 | 大带宽
+    type: url-test
+    include-all: true
+    tolerance: 20
+    interval: 120
+    filter: >-
+      ^(?=.*(cf\.090227\.xyz|CF |高速|辣椒优选|CM优选)).*$
+    icon: "https://github.com/Koolson/Qure/blob/master/IconSet/Color/Speedtest.png"
 
   - name: 漏网之鱼
     <<: *SelectMH
