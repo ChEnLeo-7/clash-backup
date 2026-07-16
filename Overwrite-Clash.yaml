@@ -414,7 +414,7 @@ proxy-groups:
       - 台湾节点
       - 手动选择
       - 自动选择
-    icon: "https://raw.githubusercontent.com/Giveupmoon/Clash_Rules_Yaml/main/Icon/HOMOMIX/Color/Large/Game.png"
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Game.png"
 
   - name: Steam
     proxies:
@@ -449,7 +449,7 @@ proxy-groups:
     interval: 120
     filter: >-
       ^(?=.*(cf\.090227\.xyz|CF |高速|辣椒优选|CM优选)).*$
-    icon: "https://github.com/Koolson/Qure/blob/master/IconSet/Color/Speedtest.png"
+    icon: "https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Fries.png"
 
   - name: 漏网之鱼
     <<: *SelectMH
