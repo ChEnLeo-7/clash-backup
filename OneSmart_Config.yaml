@@ -11,7 +11,7 @@
 # 名称: OneSmartPro 一键智能代理
 # 地址: https://github.com/666OS/YYDS
 # 版本: v26.1.4
-# 作者: YYDS666
+# 作者: YYDS666 & CHENLEO_7(二改)
 # 更新: 2026 年 7 月 11 日
 # 频道: https://t.me/Pinched666
 # 描述: 基于Mihomo的智能代理配置，提供四层架构智能路由和全场景规则集
@@ -39,13 +39,13 @@ FilterOT: &FilterOT '^(?!.*(DIRECT|直接连接|美|港|坡|台|新|日|韩|奥|
 FilterAL: &FilterAL '^(?!.*(DIRECT|直接连接|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author))'
 
 # 策略组代理列表模板 - 预定义的代理节点优先级排序
-SelectAL: &SelectAL {type: select, proxies: [高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 手动选择, 直接连接]}
-OneSmart: &OneSmart {type: select, proxies: [一键智能, 高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 手动选择, 直接连接]}
-SelectDC: &SelectDC {type: select, proxies: [直接连接, 高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择]}
-SelectHQ: &SelectHQ {type: select, proxies: [高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接]}
-SelectLD: &SelectLD {type: select, proxies: [低延迟线路, 高质量线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接]}
-SelectBW: &SelectBW {type: select, proxies: [大带宽线路, 高质量线路, 低延迟线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接]}
-SelectLR: &SelectLR {type: select, proxies: [低倍率线路, 高质量线路, 低延迟线路, 大带宽线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接]}
+SelectAL: &SelectAL {type: select, proxies: [高速优选 | 大带宽, 高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 手动选择, 直接连接]}
+OneSmart: &OneSmart {type: select, proxies: [高速优选 | 大带宽, 一键智能, 高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 手动选择, 直接连接]}
+SelectDC: &SelectDC {type: select, proxies: [直接连接, 高速优选 | 大带宽, 高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择]}
+SelectHQ: &SelectHQ {type: select, proxies: [高速优选 | 大带宽, 高质量线路, 低延迟线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接]}
+SelectLD: &SelectLD {type: select, proxies: [高速优选 | 大带宽, 低延迟线路, 高质量线路, 大带宽线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接]}
+SelectBW: &SelectBW {type: select, proxies: [高速优选 | 大带宽, 大带宽线路, 高质量线路, 低延迟线路, 低倍率线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接]}
+SelectLR: &SelectLR {type: select, proxies: [高速优选 | 大带宽, 低倍率线路, 高质量线路, 低延迟线路, 大带宽线路, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 美国智能, 欧洲智能, 一键智能, 手动选择, 直接连接]}
 
 # ==================== 代理提供者 ====================
 proxy-providers:
@@ -181,6 +181,9 @@ proxy-groups:
   - {name: 兜底流量,  <<: *SelectHQ, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Final.png}
   - {name: 手动选择,  type: select, include-all: true, filter: *FilterAL, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Clubhouse.png}
   - {name: 直接连接,  type: select, proxies: [DIRECT], hidden: true, icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Direct.png}
+
+  # 新增高速优选策略组
+  - {name: 高速优选 | 大带宽, type: select, include-all: true, filter: '(cf\.090227\.xyz|CF |高速|辣椒优选|CM优选)', icon: https://github.com/Koolson/Qure/blob/master/IconSet/Color/Speedtest.png}
 
   # 线路特性层 - Fallback故障转移，按特性优化线路选择，建议修改位置顺序发挥线路优势
   - {name: 高质量线路,  <<: *BaseFB, proxies: [美国智能, 香港智能, 台湾智能, 日本智能, 狮城智能, 韩国智能, 欧洲智能, 手动选择, 直接连接], icon: https://github.com/Koolson/Qure/raw/master/IconSet/Color/Round_Robin_1.png}
