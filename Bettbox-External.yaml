@@ -1,0 +1,4 @@
+custom:
+  clash_rule_base: "https://raw.githubusercontent.com/ChEnLeo-7/clash-backup/main/Overwrite-Clash.yaml"
+  enable_rule_generator: false
+  overwrite_original_rules: false
